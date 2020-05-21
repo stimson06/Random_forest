@@ -1,0 +1,48 @@
+features datatype:
+	Categorical : Sex, Embarked, Survived
+	Ordinal     : Pclass
+	Continuous  : Age, Fare
+	Discrete    : SibSp, Parch
+
+Missing data:
+	train.csv : Age(177), Cabin(687), Embarked(2)
+	test.csv  : Age(86), Cabin(327)
+
+Pivot Analysis:
+	1. Passengers travelled in Pclass 1 are more likely to survive(62.9%).
+	2. Females have survived with the percentage of 74%.
+	3. SibSp and Parch have low coreleation value and its better to 
+	           	  derive new feature from it(Family=SibSp+Parch).
+
+Visualisation:
+	Figure 1: The peoples who travelled in titanic is mostly males and most
+		  peoples are from southampton.
+	Figure 2: Peoples between the Age 20 - 40 are more likely to survive.
+	Figure 3: Passengers who travelled in first class(Pclass=1) have survived and mostly.
+		  are ages lie between 20- 40. Passengers travelled in thrid class have the lowest
+		  number of survivors between the age 20 -40.
+	Figure 4: In Southampton & Queenstown (Embarked =S & Q)females have survived the most and 
+		  has travelled in Class 1 & 2 (Pclass =1 & 2) and males are highest survivors in 
+		  Cherbourg.
+	Figure 5: The fare for the peoples in Southampton and Cherbourg (Embarked = S & C) is high mostly 
+		  for females.
+
+Model:
+	The Random forest classifier is used with 100 estimators
+	The accuracy of model is 89 % 
+
+Data Wrangling:
+	1. The features Cabin and Ticket are in no releation with the surivival rate. So, they are eliminated.
+	2. The Names in the set is analaysed and corrected and  tittles are mapped according with the categoris
+	   ("Mr": 1, "Miss": 2, "Mrs": 3, "Master": 4, "Rare": 5).
+	3. Band for countinous datatype is created and set values accordingly.
+	4. Created new feature with SibSp and Parch (Family=SibSp+Parch).
+	5. Columns that created for setting the band values are removed.
+
+Imputation:
+	1. In train_data the missing values are Age= 177 and Embarked= 2.
+	2. In test_data the missing values are Age= 86 and Fare= 1.
+	3. The imputation are done separately for the train_data and test_data. Sice the Iterative Imputer
+	   works only on the dataframe.(Documentation:https://scikit-learn.org/stable/modules/impute.html).
+ 	4. Since there are only two missing values in Embarked it is fixed with most occcuring value.
+	5. Label Encoding for the categorical features (Sex, Embarked) is done with LabelEnconder.
