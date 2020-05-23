@@ -6,4 +6,7 @@ Source:
 Visualisation:
 	Consist of visualisations created using the matplotlib
 
+Tableau:
+	Visualisations and dashboards that arre created using tableau
+
 The definitions and details added in the Insight.txt
