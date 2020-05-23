@@ -1,3 +1,7 @@
+# NOTE #
+# The analysis and the definition of the function written in model is packed into Insights.txt  #
+# Some of the executable statements contains "##" in front of them #
+
 import pandas as pd 
 import seaborn as sns
 import matplotlib.pyplot as plt
