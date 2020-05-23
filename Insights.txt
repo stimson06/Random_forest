@@ -8,7 +8,7 @@ Missing data:
 	train.csv : Age(177), Cabin(687), Embarked(2)
 	test.csv  : Age(86), Cabin(327)
 
-Pivot Analysis:
+Pivot_Analysis:
 	1. Passengers travelled in Pclass 1 are more likely to survive(62.9%).
 	2. Females have survived with the percentage of 74%.
 	3. SibSp and Parch have low coreleation value and its better to 
@@ -31,7 +31,7 @@ Model:
 	The Random forest classifier is used with 100 estimators
 	The accuracy of model is 89 % 
 
-Data Wrangling:
+Data_Wrangling:
 	1. The features Cabin and Ticket are in no releation with the surivival rate. So, they are eliminated.
 	2. The Names in the set is analaysed and corrected and  tittles are mapped according with the categoris
 	   ("Mr": 1, "Miss": 2, "Mrs": 3, "Master": 4, "Rare": 5).
